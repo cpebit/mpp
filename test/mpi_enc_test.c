@@ -1131,8 +1131,8 @@ void *enc_test(void *arg)
         goto MPP_TEST_OUT;
     }
 
-    if (cmd->kmpp_en)
-        kmpp_cfg_init(info);
+    //if (cmd->kmpp_en)
+    kmpp_cfg_init(info);
 
     ret = mpp_init(p->ctx, MPP_CTX_ENC, p->type);
     if (ret) {
