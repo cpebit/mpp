@@ -1290,6 +1290,8 @@ int enc_test_multi(MpiEncTestArgs* cmd, const char *name)
 
 int main(int argc, char **argv)
 {
+    mpp_log("test");
+
     RK_S32 ret = MPP_NOK;
     MpiEncTestArgs* cmd = mpi_enc_test_cmd_get();
 
