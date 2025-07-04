@@ -1122,6 +1122,11 @@ void *enc_test(void *arg)
         goto MPP_TEST_OUT;
     }
 
+    if (1) {
+        mpp_log("Init kmpp");
+        kmpp_cfg_init(info);
+    }
+
     mpp_log_q(quiet, "%p encoder test start w %d h %d type %d\n",
               p->ctx, p->width, p->height, p->type);
 
@@ -1129,11 +1134,6 @@ void *enc_test(void *arg)
     if (MPP_OK != ret) {
         mpp_err("mpi control set output timeout %d ret %d\n", timeout, ret);
         goto MPP_TEST_OUT;
-    }
-
-    if (1) {
-        mpp_log("Init kmpp");
-        kmpp_cfg_init(info);
     }
 
     ret = mpp_init(p->ctx, MPP_CTX_ENC, p->type);
