@@ -1085,6 +1085,8 @@ void *enc_test(void *arg)
 
     mpp_log_q(quiet, "%s start\n", info->name);
 
+    mpp_log("KAK");
+
     ret = test_ctx_init(info);
     if (ret) {
         mpp_err_f("test data init failed ret %d\n", ret);
